@@ -2,17 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "\u8fd9\u91cc\u662f Hugo(\u706b\u9505) \u7684\u535a\u5ba2\n\n\n\u535a\u5ba2\u5217\u8868\n\n\n\n\nHello World", 
+            "text": "\u535a\u5ba2\u5217\u8868\n\n\n\n\nHello World\n\n\nC++\u7684\u6784\u9020\u51fd\u6570\uff0c\u6790\u6784\u51fd\u6570\u4e2d\u8c03\u865a\u51fd\u6570", 
             "title": "Home"
         }, 
         {
-            "location": "/#hugo", 
-            "text": "", 
-            "title": "\u8fd9\u91cc\u662f Hugo(\u706b\u9505) \u7684\u535a\u5ba2"
-        }, 
-        {
             "location": "/#_1", 
-            "text": "Hello World", 
+            "text": "Hello World  C++\u7684\u6784\u9020\u51fd\u6570\uff0c\u6790\u6784\u51fd\u6570\u4e2d\u8c03\u865a\u51fd\u6570", 
             "title": "\u535a\u5ba2\u5217\u8868"
         }, 
         {
@@ -29,6 +24,16 @@
             "location": "/blog/1/#_2", 
             "text": "\u6b63\u6587\u4e86\uff0c\u4f60\u597d\uff0c\u4e16\u754c\uff01", 
             "title": "\u526f\u6807\u9898"
+        }, 
+        {
+            "location": "/blog/2/", 
+            "text": "\u5728C++\u7684\u6784\u9020\u51fd\u6570,\u6790\u6784\u51fd\u6570\u4e2d\uff0c\u4e0d\u5e94\u8be5\u8c03\u7528\u865a\u51fd\u6570\n\n\n\nclass Base {\n    public Base() {\n        func();\n    }\n\n    virtual void func() {\n        cout \n \nBase::func\n;\n    }\n}\n\nclass A : public Base {\n    A() {\n        func();\n    }\n\n    virtual void func() {\n        cout \n \nA::func\n;\n    }\n}\n\nA a;\n\n\n\n\n\u8f93\u51fa\u7ed3\u679c:\n\n\n\n Base::func\n\n\n\n\n\n\u7ed3\u8bba:\n\n\n\u5728\u6784\u9020\uff21\u65f6\u4f1a\u5148\u53bb\u8c03Base\u7684\u6784\u9020\u51fd\u6570\uff0cA \u7684\u6784\u9020\u8fd8\u6ca1\u6709\u5b8c\u6210\uff0c\u4f9d\u8d56\u4e8eBase,\u6240\u4ee5\uff0c\u5728Base\u7684\u6784\u9020\u51fd\u6570\u4e2d\uff0c\u8c03func\u65f6\uff0c\uff21\u5e76\u6ca1\u6709\u5b8c\u6210\uff0c\u627e\u4e0d\u5230A\u7684\u51fd\u6570\u8868\u4e2d\u53bb\uff0c\u53ea\u4f1a\u627e\u5230\u81ea\u5df1\u7684.", 
+            "title": "2"
+        }, 
+        {
+            "location": "/blog/2/#c", 
+            "text": "class Base {\n    public Base() {\n        func();\n    }\n\n    virtual void func() {\n        cout    Base::func ;\n    }\n}\n\nclass A : public Base {\n    A() {\n        func();\n    }\n\n    virtual void func() {\n        cout    A::func ;\n    }\n}\n\nA a;  \u8f93\u51fa\u7ed3\u679c:  \n Base::func  \u7ed3\u8bba:  \u5728\u6784\u9020\uff21\u65f6\u4f1a\u5148\u53bb\u8c03Base\u7684\u6784\u9020\u51fd\u6570\uff0cA \u7684\u6784\u9020\u8fd8\u6ca1\u6709\u5b8c\u6210\uff0c\u4f9d\u8d56\u4e8eBase,\u6240\u4ee5\uff0c\u5728Base\u7684\u6784\u9020\u51fd\u6570\u4e2d\uff0c\u8c03func\u65f6\uff0c\uff21\u5e76\u6ca1\u6709\u5b8c\u6210\uff0c\u627e\u4e0d\u5230A\u7684\u51fd\u6570\u8868\u4e2d\u53bb\uff0c\u53ea\u4f1a\u627e\u5230\u81ea\u5df1\u7684.", 
+            "title": "\u5728C++\u7684\u6784\u9020\u51fd\u6570,\u6790\u6784\u51fd\u6570\u4e2d\uff0c\u4e0d\u5e94\u8be5\u8c03\u7528\u865a\u51fd\u6570"
         }
     ]
 }
