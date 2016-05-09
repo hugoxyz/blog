@@ -1,0 +1,34 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "\u8fd9\u91cc\u662f Hugo(\u706b\u9505) \u7684\u535a\u5ba2\n\n\n\u535a\u5ba2\u5217\u8868\n\n\n\n\nHello World", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#hugo", 
+            "text": "", 
+            "title": "\u8fd9\u91cc\u662f Hugo(\u706b\u9505) \u7684\u535a\u5ba2"
+        }, 
+        {
+            "location": "/#_1", 
+            "text": "Hello World", 
+            "title": "\u535a\u5ba2\u5217\u8868"
+        }, 
+        {
+            "location": "/blog/1/", 
+            "text": "\u8fd9\u662f\u6807\u9898\n\n\n\u526f\u6807\u9898\n\n\n\u6b63\u6587\u4e86\uff0c\u4f60\u597d\uff0c\u4e16\u754c\uff01", 
+            "title": "1"
+        }, 
+        {
+            "location": "/blog/1/#_1", 
+            "text": "", 
+            "title": "\u8fd9\u662f\u6807\u9898"
+        }, 
+        {
+            "location": "/blog/1/#_2", 
+            "text": "\u6b63\u6587\u4e86\uff0c\u4f60\u597d\uff0c\u4e16\u754c\uff01", 
+            "title": "\u526f\u6807\u9898"
+        }
+    ]
+}
