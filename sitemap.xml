@@ -12,14 +12,8 @@
     
         
     <url>
-     <loc>None/blog/1/</loc>
-     <lastmod>2016-05-10</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/blog/2/</loc>
-     <lastmod>2016-05-10</lastmod>
+     <loc>None</loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
