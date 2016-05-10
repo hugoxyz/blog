@@ -1,3 +1,7 @@
 site_name: Hugo(火锅)'s Blog
+site_author: Hugo Huang
+site_favicon: favicon.ico
 # pages:
 # - Home: index.md
+
+google_analytics: ['UA-77537721-1', 'auto']
