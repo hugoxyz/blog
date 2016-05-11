@@ -8,7 +8,7 @@
   
   <meta name="author" content="Hugo Huang">
   
-  <title>1 - Hugo(火锅)'s Blog</title>
+  <title>4 - Hugo(火锅)'s Blog</title>
   
 
   <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -24,9 +24,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "1";
-    var mkdocs_page_input_path = "blog/2016/5/1.md";
-    var mkdocs_page_url = "/blog/2016/5/1/";
+    var mkdocs_page_name = "4";
+    var mkdocs_page_input_path = "blog/2016/5/4.md";
+    var mkdocs_page_url = "/blog/2016/5/4/";
   </script>
   
   <script src="../../../../js/jquery-2.1.1.min.js"></script>
@@ -88,17 +88,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">1</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">这是标题</a></li>
-                
-                    <li><a class="toctree-l4" href="#_2">副标题</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../1/">1</a>
         
     </li>
 
@@ -118,8 +109,15 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../4/">4</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">4</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#python">python中打印当前位置所在的堆栈信息</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -163,7 +161,7 @@
         
       
     
-    <li>1</li>
+    <li>4</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -173,9 +171,22 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1">这是标题</h1>
-<h2 id="_2">副标题</h2>
-<p>正文了，你好，世界！</p>
+                <h1 id="python">python中打印当前位置所在的堆栈信息</h1>
+<p>有时调试python时需要得到当前代码所在的堆栈信息，在网上找到半天，原来可以用getframe,自己调试后，写了个工具函数</p>
+<pre><code class="python">import sys
+
+def print_trace_info():
+    info = &quot;Stack Info:\n&quot;
+    f = sys._getframe()
+    f = f.f_back    # first frame is detail trace, ignore it
+    while hasattr(f, &quot;f_code&quot;):
+        co = f.f_code
+        s = &quot;%s:%s -&gt;%s\n&quot; % (os.path.basename(co.co_filename), f.f_lineno, co.co_name)
+        info = info + s
+        f = f.f_back
+    print(info)
+
+</code></pre>
               
             </div>
           </div>
@@ -183,10 +194,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../2/" class="btn btn-neutral float-right" title="2">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../../../.." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../3/" class="btn btn-neutral" title="3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -212,10 +221,8 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../3/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../2/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

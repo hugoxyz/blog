@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "\u535a\u5ba2\u5217\u8868\n\n\n\n\nHello World\n\n\nC++\u7684\u6784\u9020\u51fd\u6570\uff0c\u6790\u6784\u51fd\u6570\u4e2d\u8c03\u865a\u51fd\u6570\n\n\n\u67e5\u627egradle\u6587\u4ef6\u4e2d\u7684\u4f9d\u8d56\u5e93\u540d\u5b57", 
+            "text": "\u535a\u5ba2\u5217\u8868\n\n\n\n\nHello World\n\n\nC++\u7684\u6784\u9020\u51fd\u6570\uff0c\u6790\u6784\u51fd\u6570\u4e2d\u8c03\u865a\u51fd\u6570\n\n\n\u67e5\u627egradle\u6587\u4ef6\u4e2d\u7684\u4f9d\u8d56\u5e93\u540d\u5b57\n\n\npython\u4e2d\u6253\u5370\u5f53\u524d\u4f4d\u7f6e\u6240\u5728\u7684\u5806\u6808\u4fe1\u606f", 
             "title": "Home"
         }, 
         {
             "location": "/#_1", 
-            "text": "Hello World  C++\u7684\u6784\u9020\u51fd\u6570\uff0c\u6790\u6784\u51fd\u6570\u4e2d\u8c03\u865a\u51fd\u6570  \u67e5\u627egradle\u6587\u4ef6\u4e2d\u7684\u4f9d\u8d56\u5e93\u540d\u5b57", 
+            "text": "Hello World  C++\u7684\u6784\u9020\u51fd\u6570\uff0c\u6790\u6784\u51fd\u6570\u4e2d\u8c03\u865a\u51fd\u6570  \u67e5\u627egradle\u6587\u4ef6\u4e2d\u7684\u4f9d\u8d56\u5e93\u540d\u5b57  python\u4e2d\u6253\u5370\u5f53\u524d\u4f4d\u7f6e\u6240\u5728\u7684\u5806\u6808\u4fe1\u606f", 
             "title": "\u535a\u5ba2\u5217\u8868"
         }, 
         {
@@ -59,6 +59,16 @@
             "location": "/blog/2016/5/3/#_3", 
             "text": "\u67e5\u770bgradle\u4e2d\u7684compile\u90e8\u5206\u7684\u8bed\u6cd5\u53ef\u4ee5\u77e5\u9053\uff0ccompile\u7684\u8bed\u6cd5\u53ef\u80fd\u4f1a\u6709\u4ee5\u4e0b\u51e0\u79cd\n\u5f53\u7136compile\u540e\u9762\u7684\u95ed\u5305\u53ef\u80fd\u6709\uff0c\u4e5f\u53ef\u80fd\u6ca1\u6709  \ncompile 'com.android.support:appcompat-v7:23.2.1'\ncompile  com.android.support:appcompat-v7:23.2.2 \ncompile ( com.android.support:appcompat-v7:23.2.3 )\ncompile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'  \u8981\u6ce8\u610f\u7684\u662f: \u4ee5\u4e0a\u6ca1\u6709\u5199\u5b8c\uff0cgroup\u4e2d\u53ef\u80fd\u662f\u5355\u5f15\u53f7\u4f20\u7684\u5b57\u4e32\uff0c\u4e5f\u6709\u53cc\u5f15\u53f7  \u6240\u6709\u7684\u4f9d\u8d56\u5e93\u90fd\u662f\u4ee5\u4e0a\u9762\u7684\u5f62\u5f0f\u51fa\u73b0\uff0c\u6240\u4ee5\u6211\u6253\u7b97\u7528\u6b63\u5219\u6765\u5339\u914d\u67e5\u627e\n\u5bf9\u4e8e\u524d\u4e09\u79cd\uff0c\u53ef\u4ee5\u7528\u8fd9\u4e2a\u6b63\u5219  re.findall(r'compile\\s*[' \\(]{1,2}([^' ()]*)[' \\)]{1,2}', gradle_text)  \u5bf9\u4e8e\u7b2c\u56db\u79cd\uff0c\u53ef\u4ee5\u7528\u8fd9\u4e2a\u6b63\u5219  re.findall(r'compile\\s+group\\s*:\\s*[' (]{1,2}(.*)[' )]{1,2}\\s*,\\s*name\\s*:\\s*[' (]{1,2}(.*)[' )]{1,2}\\s*,\\s*version\\s*:\\s*[' (]{1,2}(.*)[' )]{1,2}\\s*', gradle_text)  \u524d\u9762\u4e09\u79cd\u627e\u51fa\u6765\u7684\u5e93\u540d\u5b57\uff0c\u8fd8\u8981\u7528  :  \u4f5c\u4e00\u6b21\u5206\u9694\uff0c\u5f97\u5230group, name, version,\u6bd4\u8f83\u65f6\u53ea\u6bd4\u8f83group,name\u5c31\u597d\u4e86\uff0c\u5f53\u7136\u5982\u679c\u5bf9\u7248\u672c\u6709\u8981\u6c42\uff0c\u5c31\u4e5f\u8981\u6bd4\u8f83\u4e86", 
             "title": "\u5b9e\u65bd"
+        }, 
+        {
+            "location": "/blog/2016/5/4/", 
+            "text": "python\u4e2d\u6253\u5370\u5f53\u524d\u4f4d\u7f6e\u6240\u5728\u7684\u5806\u6808\u4fe1\u606f\n\n\n\u6709\u65f6\u8c03\u8bd5python\u65f6\u9700\u8981\u5f97\u5230\u5f53\u524d\u4ee3\u7801\u6240\u5728\u7684\u5806\u6808\u4fe1\u606f\uff0c\u5728\u7f51\u4e0a\u627e\u5230\u534a\u5929\uff0c\u539f\u6765\u53ef\u4ee5\u7528getframe,\u81ea\u5df1\u8c03\u8bd5\u540e\uff0c\u5199\u4e86\u4e2a\u5de5\u5177\u51fd\u6570\n\n\nimport sys\n\ndef print_trace_info():\n    info = \nStack Info:\\n\n\n    f = sys._getframe()\n    f = f.f_back    # first frame is detail trace, ignore it\n    while hasattr(f, \nf_code\n):\n        co = f.f_code\n        s = \n%s:%s -\n%s\\n\n % (os.path.basename(co.co_filename), f.f_lineno, co.co_name)\n        info = info + s\n        f = f.f_back\n    print(info)", 
+            "title": "4"
+        }, 
+        {
+            "location": "/blog/2016/5/4/#python", 
+            "text": "\u6709\u65f6\u8c03\u8bd5python\u65f6\u9700\u8981\u5f97\u5230\u5f53\u524d\u4ee3\u7801\u6240\u5728\u7684\u5806\u6808\u4fe1\u606f\uff0c\u5728\u7f51\u4e0a\u627e\u5230\u534a\u5929\uff0c\u539f\u6765\u53ef\u4ee5\u7528getframe,\u81ea\u5df1\u8c03\u8bd5\u540e\uff0c\u5199\u4e86\u4e2a\u5de5\u5177\u51fd\u6570  import sys\n\ndef print_trace_info():\n    info =  Stack Info:\\n \n    f = sys._getframe()\n    f = f.f_back    # first frame is detail trace, ignore it\n    while hasattr(f,  f_code ):\n        co = f.f_code\n        s =  %s:%s - %s\\n  % (os.path.basename(co.co_filename), f.f_lineno, co.co_name)\n        info = info + s\n        f = f.f_back\n    print(info)", 
+            "title": "python\u4e2d\u6253\u5370\u5f53\u524d\u4f4d\u7f6e\u6240\u5728\u7684\u5806\u6808\u4fe1\u606f"
         }
     ]
 }
