@@ -6,3 +6,4 @@
 * [查找gradle文件中的依赖库名字](./blog/2016/5/3.md)
 * [python中打印当前位置所在的堆栈信息](./blog/2016/5/4.md)
 * [如何手动在eclipse原工程上把其转化为android studio工程](./blog/2016/5/5.md)
+* [左乘 右乘](./blog/2016/5/6.md)
