@@ -8,7 +8,7 @@
   
   <meta name="author" content="Hugo Huang">
   
-  <title>3 - Hugo(火锅)'s Blog</title>
+  <title>7 - Hugo(火锅)'s Blog</title>
   
 
   <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -24,9 +24,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "3";
-    var mkdocs_page_input_path = "blog/2016/5/3.md";
-    var mkdocs_page_url = "/blog/2016/5/3/";
+    var mkdocs_page_name = "7";
+    var mkdocs_page_input_path = "blog/2016/5/7.md";
+    var mkdocs_page_url = "/blog/2016/5/7/";
   </script>
   
   <script src="../../../../js/jquery-2.1.1.min.js"></script>
@@ -102,24 +102,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">3</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#gradle">查找gradle文件中的依赖库名字</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_1">需求</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_2">思考</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_3">实施</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../3/">3</a>
         
     </li>
 
@@ -146,8 +130,15 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../7/">7</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">7</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#android-cpu">记一次android cpu使用率调试</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -191,7 +182,7 @@
         
       
     
-    <li>3</li>
+    <li>7</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -201,33 +192,20 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="gradle">查找gradle文件中的依赖库名字</h1>
-<h1 id="_1">需求</h1>
-<p>最近有一个需求，用python代码中修改android studio中的gradle脚本，在其中添加需要添加的依赖库</p>
-<h1 id="_2">思考</h1>
-<p>最完美的方法, 当然就是去解析gradle语法, 但是这个太费时了，而我的需求只要求检查gralde中有没有要添加的库，没有就再添加。所以我觉得其实可以直接去找 <code>dependencies</code> 中的 <code>compile</code> 部分。</p>
-<h1 id="_3">实施</h1>
-<p>查看gradle中的compile部分的语法可以知道，compile的语法可能会有以下几种
-当然compile后面的闭包可能有，也可能没有</p>
-<pre><code class="gradle">
-compile 'com.android.support:appcompat-v7:23.2.1'
-compile &quot;com.android.support:appcompat-v7:23.2.2&quot;
-compile (&quot;com.android.support:appcompat-v7:23.2.3&quot;)
-compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
-
-</code></pre>
-
-<p>要注意的是: 以上没有写完，group中可能是单引号传的字串，也有双引号</p>
-<p>所有的依赖库都是以上面的形式出现，所以我打算用正则来匹配查找
-对于前三种，可以用这个正则</p>
-<pre><code class="python">re.findall(r'compile\s*['&quot;\(]{1,2}([^'&quot;()]*)['&quot;\)]{1,2}', gradle_text)
-</code></pre>
-
-<p>对于第四种，可以用这个正则</p>
-<pre><code class="python">re.findall(r'compile\s+group\s*:\s*['&quot;(]{1,2}(.*)['&quot;)]{1,2}\s*,\s*name\s*:\s*['&quot;(]{1,2}(.*)['&quot;)]{1,2}\s*,\s*version\s*:\s*['&quot;(]{1,2}(.*)['&quot;)]{1,2}\s*', gradle_text)
-</code></pre>
-
-<p>前面三种找出来的库名字，还要用 <code>:</code> 作一次分隔，得到group, name, version,比较时只比较group,name就好了，当然如果对版本有要求，就也要比较了</p>
+                <h1 id="android-cpu">记一次android cpu使用率调试</h1>
+<p>有一次工作中,遇到cpu使用过高问题,我只是想简单地查看android手机上的cpu使用情况,这时其实可以用adb的shell命令联到andorid手机上来查看就行了</p>
+<ol>
+<li>运行 <code>adb shell</code>,进到手机上的shell</li>
+<li>运行 <code>top -m 10 -d 10 -t -s cpu</code> 来查看android手机上cpu的使用情况</li>
+</ol>
+<p>我运行一个空工程, 然后查看cpu使用情况, 如图</p>
+<p><img alt="" src="../res/7_empty.png" /></p>
+<p>可以看到 <code>com.htl.test</code> 这个包下有一个进程(18601), 这个进程中有两个线程 18617 和 18632</p>
+<p>然后我运行了一个sample工程,再看手机上的cpu使用情况</p>
+<p><img alt="" src="../res/7_plugins.png" /></p>
+<p>可以看到 <code>com.sdkbox.sample.admob.cpp</code> 这个包下有一个进程(19528), 这个过程中有三个线程 19543 19574 19547,相比于空工程,多了一个线程 WebViewCoreThre (线程号为19574),而且可以看到它的cpu使用率在2%, 所以应该是在sample工程多启动了一个叫 WebViewCoreThre 的线程</p>
+<p>PS. <code>top</code>的其它使用参数,可以运行 <code>top -h</code> 查看
+PS. Android Studio中的cpu使用情况查看,真心不错,java代码的话,都可以统计到函数的调用时间图,太方便了. Android Moniter界面上就可以找到cpu的统计情况,如果只想简单些可以用上面的命令行<code>top</code></p>
               
             </div>
           </div>
@@ -235,10 +213,8 @@ compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../4/" class="btn btn-neutral float-right" title="4">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../2/" class="btn btn-neutral" title="2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../6/" class="btn btn-neutral" title="6"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -264,10 +240,8 @@ compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../6/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../4/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
