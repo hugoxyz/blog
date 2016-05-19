@@ -8,3 +8,4 @@
 * [如何手动在eclipse原工程上把其转化为android studio工程](./blog/2016/5/5.md)
 * [左乘 右乘](./blog/2016/5/6.md)
 * [记一次android cpu使用率调试](./blog/2016/5/7.md)
+* [记一次unity c++ plugin 插件库 crash](./blog/2016/5/8.md)
