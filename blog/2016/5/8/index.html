@@ -8,7 +8,7 @@
   
   <meta name="author" content="Hugo Huang">
   
-  <title>6 - Hugo(火锅)'s Blog</title>
+  <title>8 - Hugo(火锅)'s Blog</title>
   
 
   <link rel="shortcut icon" href="../../../../favicon.ico">
@@ -24,9 +24,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "6";
-    var mkdocs_page_input_path = "blog/2016/5/6.md";
-    var mkdocs_page_url = "/blog/2016/5/6/";
+    var mkdocs_page_name = "8";
+    var mkdocs_page_input_path = "blog/2016/5/8.md";
+    var mkdocs_page_url = "/blog/2016/5/8/";
   </script>
   
   <script src="../../../../js/jquery-2.1.1.min.js"></script>
@@ -123,15 +123,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">6</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">左乘 右乘</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../6/">6</a>
         
     </li>
 
@@ -144,8 +137,15 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../8/">8</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">8</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#unity-c-plugin-crash">Unity C++ plugin 插件库 crash</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -189,7 +189,7 @@
         
       
     
-    <li>6</li>
+    <li>8</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -199,26 +199,16 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1">左乘 右乘</h1>
-<p>opengl中有左乘, 右乘的概念, 到底左乘是什么意思呢</p>
-<p>A左乘B, 对应的数学表达式就是 A * B
-A右乘B, 对应的数学表达式就是 B * A</p>
-<p>通俗点说, 左乘就是 从左边乘过去, 右乘就是从右边乘过去</p>
-<p>opengl 中的旋转, 缩放, 平移都是左乘到顶点上的,</p>
-<p>比如，我们要把一个点(P)作旋转(R)缩放(S)平移(T)操作，我们知道opengl中所有的操作都是左乘上去的,
-所以我们先作旋转(R), 那么就应该是 R * P,</p>
-<p>RP = R * P</p>
-<p>再作缩放(S), 那么就应该是在结果RP上再左乘,</p>
-<p>SRP = S * RP = S * (R * P)</p>
-<p>最后作平移(T), 那么就应该在在结果SRP上再左乘,</p>
-<p>TSRP = T * SRP = T * (S * RP) = T * (S * (R * P))</p>
-<p>所以当我们把点(P)作以上的三个操作的数字表达式为 P = T * (S * (R * P))</p>
-<p>同理，我们可知，如果用这些操作都用右乘，那么就应该主是</p>
-<p>P = ((P * R) * S) * T</p>
-<p>, 每一次的操作都应该放在右边去乘(这个表达式只是表达意思，实际，这个表达式是不能用的)</p>
-<p>然后矩阵虽然不满足交换律，但是它满足结合律, 所以</p>
-<p>P = T * (S * (R * P)) = T * S * R * P</p>
-<p>我们得到了更常见的写法</p>
+                <h1 id="unity-c-plugin-crash">Unity C++ plugin 插件库 crash</h1>
+<p>今天在调试一个c++ plugin, 结果在调一个函数时crash了, 如图</p>
+<p><img alt="" src="../res/8_unity_crash.png" /></p>
+<p>查看crash stack知道,应该是在释放c++中函数返回的char*时报错了.</p>
+<p>查了资料后才知道,原来c++中返回char*给c#,要新专门分配一个字符空间,然后再把它返回出错,unity中的c++到c#的bridge会把这个空间释放掉的</p>
+<pre><code class="cpp">char* getString() {
+    string s = &quot;hugo&quot;;
+    return strdup(s.c_str()); //需要用strdup返回一个新分配好的空间,unity中会帮你释放的
+}
+</code></pre>
               
             </div>
           </div>
@@ -226,10 +216,8 @@ A右乘B, 对应的数学表达式就是 B * A</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../7/" class="btn btn-neutral float-right" title="7">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../5/" class="btn btn-neutral" title="5"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../7/" class="btn btn-neutral" title="7"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -255,10 +243,8 @@ A右乘B, 对应的数学表达式就是 B * A</p>
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../5/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../7/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../7/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
