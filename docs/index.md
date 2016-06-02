@@ -9,3 +9,5 @@
 * [左乘 右乘](./blog/2016/5/6.md)
 * [记一次android cpu使用率调试](./blog/2016/5/7.md)
 * [记一次unity c++ plugin 插件库 crash](./blog/2016/5/8.md)
+* [记一次opengles 开启深度测试反而黑屏](./blog/2016/6/1.md)
+
