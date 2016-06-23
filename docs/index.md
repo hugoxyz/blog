@@ -11,3 +11,4 @@
 * [记一次unity c++ plugin 插件库 crash](./blog/2016/5/8.md)
 * [记一次opengles 开启深度测试反而黑屏](./blog/2016/6/1.md)
 * [在 mac 上调用 fopen 失败](./blog/2016/6/2.md)
+* [unity不能识别so文件](./blog/2016/6/3.md)
