@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Hugo Huang">
+  
+  <title>3 - Hugo(火锅)'s Blog</title>
+  
+
+  <link rel="shortcut icon" href="../../../../favicon.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "3";
+    var mkdocs_page_input_path = "blog/2016/05/3.md";
+    var mkdocs_page_url = "/blog/2016/05/3/";
+  </script>
+  
+  <script src="../../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../../js/highlight.pack.js"></script>
+  <script src="../../../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-77537721-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../../.." class="icon icon-home"> Hugo(火锅)'s Blog</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Blog</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>2016</span></li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>05</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../1/">1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../2/">2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">3</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#gradle">查找gradle文件中的依赖库名字</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_1">需求</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">思考</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_3">实施</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../4/">4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../5/">5</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../6/">6</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../7/">7</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../8/">8</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>06</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../06/1/">1</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../06/2/">2</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../06/3/">3</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../06/4/">4</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../06/5/">5</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>07</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../07/1/">1</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>12</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../12/1/">1</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../..">Hugo(火锅)'s Blog</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>2016 &raquo;</li>
+        
+      
+        
+          <li>05 &raquo;</li>
+        
+      
+    
+    <li>3</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="gradle">查找gradle文件中的依赖库名字</h1>
+<h1 id="_1">需求</h1>
+<p>最近有一个需求，用python代码中修改android studio中的gradle脚本，在其中添加需要添加的依赖库</p>
+<h1 id="_2">思考</h1>
+<p>最完美的方法, 当然就是去解析gradle语法, 但是这个太费时了，而我的需求只要求检查gralde中有没有要添加的库，没有就再添加。所以我觉得其实可以直接去找 <code>dependencies</code> 中的 <code>compile</code> 部分。</p>
+<h1 id="_3">实施</h1>
+<p>查看gradle中的compile部分的语法可以知道，compile的语法可能会有以下几种
+当然compile后面的闭包可能有，也可能没有</p>
+<pre><code class="gradle">
+compile 'com.android.support:appcompat-v7:23.2.1'
+compile &quot;com.android.support:appcompat-v7:23.2.2&quot;
+compile (&quot;com.android.support:appcompat-v7:23.2.3&quot;)
+compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
+
+</code></pre>
+
+<p>要注意的是: 以上没有写完，group中可能是单引号传的字串，也有双引号</p>
+<p>所有的依赖库都是以上面的形式出现，所以我打算用正则来匹配查找
+对于前三种，可以用这个正则</p>
+<pre><code class="python">re.findall(r'compile\s*['&quot;\(]{1,2}([^'&quot;()]*)['&quot;\)]{1,2}', gradle_text)
+</code></pre>
+
+<p>对于第四种，可以用这个正则</p>
+<pre><code class="python">re.findall(r'compile\s+group\s*:\s*['&quot;(]{1,2}(.*)['&quot;)]{1,2}\s*,\s*name\s*:\s*['&quot;(]{1,2}(.*)['&quot;)]{1,2}\s*,\s*version\s*:\s*['&quot;(]{1,2}(.*)['&quot;)]{1,2}\s*', gradle_text)
+</code></pre>
+
+<p>前面三种找出来的库名字，还要用 <code>:</code> 作一次分隔，得到group, name, version,比较时只比较group,name就好了，当然如果对版本有要求，就也要比较了</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../4/" class="btn btn-neutral float-right" title="4">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../2/" class="btn btn-neutral" title="2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../4/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
